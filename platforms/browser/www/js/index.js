@@ -33,18 +33,18 @@ var app = {
     // The scope of 'this' is the event. In order to call the 'receivedEvent'
     // function, we must explicitly call 'app.receivedEvent(...);'
     onDeviceReady: function() {
-        app.receivedEvent('deviceready');
-        cordova.InAppBrowser.open("https://enting.org", "_self", "location=no");
+        // app.receivedEvent('deviceready');
+        cordova.InAppBrowser.open("res/ldp-docs/index.html", "_self", "location=no");
     },
     // Update DOM on a Received Event
-    receivedEvent: function(id) {
-        var parentElement = document.getElementById(id);
-        var listeningElement = parentElement.querySelector('.listening');
-        var receivedElement = parentElement.querySelector('.received');
-
-        listeningElement.setAttribute('style', 'display:none;');
-        receivedElement.setAttribute('style', 'display:block;');
-
-        console.log('Received Event: ' + id);
-    }
+    // receivedEvent: function(id) {
+    // var parentElement = document.getElementById(id);
+    // var listeningElement = parentElement.querySelector('.listening');
+    // var receivedElement = parentElement.querySelector('.received');
+    //
+    // listeningElement.setAttribute('style', 'display:none;');
+    // receivedElement.setAttribute('style', 'display:block;');
+    //
+    // console.log('Received Event: ' + id);
+    // }
 };

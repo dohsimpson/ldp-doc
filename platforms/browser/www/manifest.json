@@ -1,11 +1,11 @@
 {
   "background_color": "#FFF",
   "display": "standalone",
-  "name": "helloworld",
-  "short_name": "helloworld",
-  "version": "com.phonegap.helloworld",
-  "description": "Hello World sample application that responds to the deviceready event.",
-  "author": "PhoneGap Team",
+  "name": "LDP Doc",
+  "short_name": "LDP Doc",
+  "version": "com.phonegap.ldp-doc",
+  "description": "Doc Viewer for LDP (The Linux Documentation Project)",
+  "author": "Doh Simpson",
   "icons": [],
   "start_url": "index.html"
 }
