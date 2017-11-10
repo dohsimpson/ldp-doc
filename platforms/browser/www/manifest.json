@@ -3,7 +3,7 @@
   "display": "standalone",
   "name": "LDP Doc",
   "short_name": "LDP Doc",
-  "version": "com.phonegap.ldp-doc",
+  "version": "com.dohsimpson.ldpdoc",
   "description": "Doc Viewer for LDP (The Linux Documentation Project)",
   "author": "Doh Simpson",
   "icons": [],

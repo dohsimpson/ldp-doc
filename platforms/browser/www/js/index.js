@@ -37,14 +37,31 @@ var app = {
         cordova.InAppBrowser.open("res/ldp-docs/index.html", "_self", "location=no");
     },
     // Update DOM on a Received Event
-    // receivedEvent: function(id) {
-    // var parentElement = document.getElementById(id);
-    // var listeningElement = parentElement.querySelector('.listening');
-    // var receivedElement = parentElement.querySelector('.received');
-    //
-    // listeningElement.setAttribute('style', 'display:none;');
-    // receivedElement.setAttribute('style', 'display:block;');
-    //
-    // console.log('Received Event: ' + id);
-    // }
+    receivedEvent: function(id) {
+        var parentElement = document.getElementById(id);
+        // var listeningElement = parentElement.querySelector('.listening');
+        // var receivedElement = parentElement.querySelector('.received');
+        var receivedElement = document.getElementById('received');
+
+        // listeningElement.setAttribute('style', 'display:none;');
+        // receivedElement.setAttribute('style', 'display:block;');
+        receivedElement.innerHTML = "HELLO WORLD";
+
+        console.log('Received Event: ' + id);
+        // alert("HELLO!");
+        // alert(cordova.file.applicationDirectory.getFile("index.html"));
+        window.requestFileSystem(LocalFileSystem.PERSISTENT, 0, function (fs) {
+            console.log('file system open: ' + fs.name);
+            fs.root.getFile("index.html", {}, function (fileEntry) {
+                console.log(fileEntry);
+                alert(fileEntry);
+
+                // console.log("fileEntry is file?" + fileEntry.isFile.toString());
+                // fileEntry.name == 'someFile.txt'
+                // fileEntry.fullPath == '/someFile.txt'
+                // writeFile(fileEntry, null);
+
+            }, function(err) {});
+        }, function(err) {});
+    }
 };
